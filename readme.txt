@@ -9,3 +9,9 @@ version1
 HEAD指向版本为当前版本 git reset --hard commit_id
 穿梭前使用git log查看提交历史
 重返未来使用git reflog查看命令历史 确保版本
+----------------------分割线----------------
+
+git工作区与暂存区
+git id a distributed version control system
+git id free software distributed under the gpl
+git has a mutable index called stage
