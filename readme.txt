@@ -15,3 +15,4 @@ git工作区与暂存区
 git id a distributed version control system
 git id free software distributed under the gpl
 git has a mutable index called stage
+---------------
