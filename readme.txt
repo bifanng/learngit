@@ -16,3 +16,7 @@ git id a distributed version control system
 git id free software distributed under the gpl
 git has a mutable index called stage
 ---------------
+git管理的是修改 而非是文件内容
+比如c修改1，提交：add
+再修改2，执行commit 状态为第二修改未提提交。工作区的第二次修改并未提交add
+change1....
