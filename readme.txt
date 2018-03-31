@@ -39,4 +39,4 @@ git checkout -- file恢复最新提交到版本库的版本。
 ---------------------------
 注册github网站：名称bifang 492859117@qq.com 密码：123072340qq
 
-
+ssh-keygen -t rsa -C "email@example.com"填写自己在github上的邮箱，生成key。主目录下自动生成id_rsa和id_rsq.pub私钥和公钥key。将公钥添加到github上后可以往github上的免费仓库推送。
