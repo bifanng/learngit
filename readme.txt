@@ -36,7 +36,13 @@ rm file 删除工作区文件  git status查看，提醒工作区文件被删除
 git rm file 删除版本库文件并且git commit提交
 git checkout -- file恢复最新提交到版本库的版本。
 工作区文件被误删，版本库还有，可将版本库版本替换工作区版本，“一键还原”
----------------------------
+-----------------分割线----------------
+
+------------远程数据库添加--------------
 注册github网站：名称bifang 492859117@qq.com 密码：123072340qq
 
 ssh-keygen -t rsa -C "email@example.com"填写自己在github上的邮箱，生成key。主目录下自动生成id_rsa和id_rsq.pub私钥和公钥key。将公钥添加到github上后可以往github上的免费仓库推送。
+关联远程使用命令：git remote origin git@server-name:path/repo-name.git 其中的origin为远程库的名字，默认取为origin为u远程库，server-name为github.com   path为hgithub注册远程库的用户名  repo-name为本地版本库的名称。
+git push -u origin master 第一次推送master分支的所有内容，-u推送本地内容到远程，并且关联本地和远程，以后推送拉取简化命令。
+此后 提交使用git push origin master推送最新的修改。
+----------------------------------------------
