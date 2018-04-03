@@ -50,3 +50,16 @@ git push -u origin master 第一次推送master分支的所有内容，-u推送�
 ---------------------克隆版本库-------------
 在github上新建版本库后 使用git clone git@server-name：username/repository-name.git克隆。
 git支持多种协议 包括https 但通过ssh支持的原生态git协议速度更快
+
+--------------创建与合并分支--------------
+说明：如果代码较多，直接在版本库上书写，可能因为代码不完整影响工作，现在提出分支概。自己创建分支，版本库仍然使用当前版本库工作，自己分支代码书写完成，再合并就能使用最新版本库。。
+版本库每次提交git将其串成一条线，叫主分支为master分支，master指向最新提交，HEAD指向master，每次提交master向前进一步。当创建新的分支dev时，指向master相同的最新提交，再把HEAD指向dev，表示当前在dev分支上。现在开始，对工作区的修改和提交针对dev分支，而master指针不表，dev向最新移动。dev工作完成后再合并到master上，讲master指向当前dev提交就完成合并。将dev分支删除后，就只剩下一条master分支。
+创建分支并切换git checkout -b dev   -b表示创建并切换 相当于：git branch dev 和git checkout dev
+git branch 查看当前使用的分支。
+合并git merge dev 
+删除分支 git branch -d dev
+
+---------------冲突-------------
+如果两个分支都对一个文件进行了修改提交合并。将会出现冲突，git讲无法进行快速合并。
+思路：合并时出现问题，先人为的进行冲突解决，再提交，合并完成。
+使用git log --pragh --pretty=oneline --abbrev-commit查看合并图
